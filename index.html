@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>迈宝 PPT 转视频工具 · 下载</title>
+<meta name="description" content="把一个 PowerPoint 一键变成带 AI 中文配音和字幕的 MP4 视频。本地运行，免费版功能完整、不限页数。">
+<link rel="icon" href="assets/favicon-32.png">
+<style>
+:root{
+  --ink:#30364c; --muted:#68738a; --line:#e7eaf3; --accent:#6860d7; --soft:#f2f0ff;
+  --card:#ffffff; --radius:16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; color:var(--ink);
+  background:
+    radial-gradient(ellipse at 18% 0%, #dce3ffb0, transparent 46%),
+    radial-gradient(ellipse at 92% 52%, #f0def9b0, transparent 42%),
+    #f6f8fd;
+  font:16px/1.75 MiSans,'Microsoft YaHei UI','Microsoft YaHei','PingFang SC',system-ui,-apple-system,sans-serif;
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+a{color:var(--accent)}
+h1,h2,h3,p{margin:0}
+
+/* 顶部 */
+header{padding:56px 0 30px;text-align:center}
+.logo{height:52px;width:auto;display:block;margin:0 auto 26px}
+h1{font-size:34px;line-height:1.3;font-weight:600;letter-spacing:.5px}
+.lead{margin:16px auto 0;max-width:620px;font-size:17px;color:#4d556e}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.badges li{
+  background:#ffffffc4;border:1px solid var(--line);border-radius:999px;
+  padding:6px 16px;font-size:13px;color:#5a6480;box-shadow:0 2px 8px #353b740a;
+}
+.cta{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:34px 0 0}
+.btn{
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+  min-width:230px;padding:15px 26px;border-radius:12px;text-decoration:none;
+  font-size:16px;font-weight:600;line-height:1.35;transition:box-shadow .18s,transform .18s;
+}
+.btn .sub{display:block;font-size:12px;font-weight:400;opacity:.82;margin-top:2px}
+.btn.primary{
+  background:linear-gradient(115deg,#7a69df,#6258d6);color:#fff;border:1px solid #7a65d0;
+  box-shadow:inset 0 1px 0 #ffffff42,0 4px 12px #7661dc33;
+}
+.btn.primary:hover{box-shadow:0 8px 22px #7661dc55;transform:translateY(-1px)}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid #e2e5ed;box-shadow:0 2px 10px #353b740d}
+.btn.ghost:hover{background:var(--soft)}
+.verline{margin:20px 0 0;font-size:13px;color:var(--muted)}
+
+/* 截图 */
+.shot{margin:44px 0 8px}
+.shot img{
+  display:block;width:100%;height:auto;border-radius:var(--radius);
+  border:1px solid #ffffff;box-shadow:0 18px 50px #353b741f;background:#fff;
+}
+.shot figcaption{text-align:center;font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* 通用卡片区 */
+section.block{margin:56px 0 0}
+h2.section{font-size:21px;font-weight:600;margin-bottom:6px}
+p.section-sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 22px 20px;box-shadow:0 6px 22px #353b740d;
+}
+.card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.card p{font-size:14px;color:#5a6480}
+.card .num{
+  display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;
+  background:linear-gradient(135deg,#e8edff,#f2e9fa);color:#7a6cc4;
+  font-size:13px;font-weight:600;margin-bottom:12px;
+}
+
+/* 三步 */
+.steps{counter-reset:s}
+.steps .card{padding-top:20px}
+.steps h3:before{
+  counter-increment:s;content:counter(s);
+  display:inline-grid;place-items:center;width:22px;height:22px;margin-right:9px;
+  border-radius:7px;background:var(--soft);color:var(--accent);font-size:12.5px;vertical-align:1px;
+}
+
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid #f0f2f8;vertical-align:top}
+th{background:#fafbff;font-weight:600;font-size:13px;color:#4d556e}
+tr:last-child td{border-bottom:0}
+code{font-family:ui-monospace,Consolas,'Courier New',monospace;font-size:12.5px;
+  word-break:break-all;color:#4a4f66}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-top:14px}
+summary{cursor:pointer;font-size:14px;font-weight:500}
+details table{margin-top:14px;border-radius:10px}
+
+/* 问答 */
+.faq{display:grid;gap:12px}
+.faq div{background:#ffffffd0;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.faq b{display:block;font-size:14.5px;font-weight:600;margin-bottom:4px}
+.faq span{font-size:13.5px;color:#5a6480}
+
+/* 边界提示 */
+.notice{
+  background:linear-gradient(120deg,#fbf7ff,#f4f7ff);
+  border:1px solid #e8e2f6;border-radius:var(--radius);padding:18px 22px;
+  font-size:13.5px;color:#5a6480;margin-top:18px;
+}
+.notice b{color:#4d556e}
+
+footer{margin:64px 0 0;padding:30px 0 46px;border-top:1px solid var(--line);text-align:center}
+footer .fl{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px}
+footer .fl img{height:26px;width:auto}
+footer p{font-size:13px;color:var(--muted)}
+footer .fine{font-size:12px;color:#8b93a8;margin-top:8px}
+
+@media(max-width:640px){
+  header{padding:38px 0 22px}
+  h1{font-size:26px}
+  .lead{font-size:15.5px}
+  .btn{min-width:0;width:100%}
+  .cta{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="logo" src="assets/logo.png" alt="迈宝">
+  <h1>迈宝 PPT 转视频工具</h1>
+  <p class="lead">把一个 PowerPoint 文件，一键变成带 AI 中文配音和字幕的 MP4 视频。适合课件、培训、产品介绍、知识分享。</p>
+  <ul class="badges">
+    <li>免费版功能完整 · 不限页数</li>
+    <li>本地运行 · 课件不上传</li>
+    <li>Windows 10 / 11</li>
+  </ul>
+  <div class="cta">
+    <!-- ↓↓↓ 发布前要改：下面两个下载地址里的仓库名 ↓↓↓ -->
+    <a class="btn primary" href="https://github.com/chen1588/maibao-downloads/releases/latest/download/MBppt2video-gui.exe">下载图形界面版<span class="sub">推荐 · 双击即用，不用安装</span></a>
+    <a class="btn ghost" href="https://github.com/chen1588/maibao-downloads/releases/latest/download/MBppt2video.exe">下载命令行版<span class="sub">批量转换 · 排障</span></a>
+  </div>
+  <p class="verline">当前版本 <b>v0.20.2</b> · 2026-09-28 · 免费，不需要授权码</p>
+</header>
+
+<figure class="shot">
+  <img src="screenshots/gui-main.png" alt="迈宝 PPT 转视频工具界面">
+  <figcaption>图形界面版：左边选页、中间对照原页改台词、右边调配音，改完点「导出视频」。</figcaption>
+</figure>
+
+<section class="block">
+  <h2 class="section">它是什么</h2>
+  <p class="section-sub">不学新软件，跟做 PPT 一样简单。</p>
+  <div class="cards">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>自动写解说稿</h3>
+      <p>直接读你 PPT 每页的正文和备注，自动变成配音台词；不满意的地方自己改。</p>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>AI 中文配音 + 字幕</h3>
+      <p>内置 14 个中文音色（含男声、方言），可逐页调语速音量；也能选本地离线配音，断网可用。</p>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>批量扔进去排队跑</h3>
+      <p>一次选一堆 PPT（连文件夹都行），排队挨个出片，你可以先去干别的。</p>
+    </div>
+  </div>
+  <div class="notice">
+    <b>先说清楚能力边界：</b>导出的是<b>静态页</b>——PPT 里的<b>动画和转场不会保留</b>，<b>嵌入的视频/音频也不包含</b>；配音和字幕由本工具生成。
+    如果必须要保住动画，请用 PowerPoint 自带的「导出为视频」。
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="section">三步出片</h2>
+  <p class="section-sub">从打开到出片，就三下。</p>
+  <div class="cards steps">
+    <div class="card"><h3>打开 PPT</h3><p>点「打开 PPT / 浏览…」选一个 <code>.pptx</code>。</p></div>
+    <div class="card"><h3>加载文案</h3><p>逐页检查、修改配音台词（可给单页单独调语速、音量）。</p></div>
+    <div class="card"><h3>导出视频</h3><p>点「导出视频」，状态栏显示「第 X/Y 页」，跑完可直接预览。</p></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="section">下载哪个</h2>
+  <p class="section-sub">两个都是免费的绿色程序，下载下来双击就能用。</p>
+  <table>
+    <thead><tr><th style="width:34%">文件</th><th style="width:20%">大小</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><code>MBppt2video-gui.exe</code></td><td>111 MB</td><td><b>图形界面版（推荐）</b>：有窗口、能点，适合日常使用。</td></tr>
+      <tr><td><code>MBppt2video.exe</code></td><td>108 MB</td><td><b>命令行版</b>：批量转换、环境预检、起网页版。</td></tr>
+    </tbody>
+  </table>
+
+  <details>
+    <summary>校验文件完整性（SHA256，可选）</summary>
+    <table>
+      <thead><tr><th style="width:34%">文件</th><th>SHA256</th></tr></thead>
+      <tbody>
+        <tr><td><code>MBppt2video-gui.exe</code></td><td><code>747F1A210BA1B00220A0217349FC00FCB424DA228A2FB6D7A4EE4B807E21FFEC</code></td></tr>
+        <tr><td><code>MBppt2video.exe</code></td><td><code>8A87850DFDEA412AF7F3952FA3294D1FB33D169A16D9E7936E628D37814C97C4</code></td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<section class="block">
+  <h2 class="section">装之前要知道</h2>
+  <div class="faq">
+    <div><b>需要什么环境？</b><span>Windows 10 / 11（64 位）。电脑上要装 <b>Microsoft Office</b> 或 <b>LibreOffice</b>（二选一，用来把 PPT 渲染成画面）。</span></div>
+    <div><b>要收钱吗？</b><span>不要。免费版功能完整、不限页数、不需要授权码。商业授权只针对企业客户的「技术支持 + 定制 + 私有化部署」。</span></div>
+    <div><b>提示「未知发布者」？</b><span>正常，我们没买代码签名证书。点「更多信息 → 仍要运行」即可。</span></div>
+    <div><b>杀毒软件报警？</b><span>Python 打包程序的常见误报，加信任即可。</span></div>
+    <div><b>转换失败？</b><span>先点「转换前预检」，按提示处理——多数是没装 Office / LibreOffice。</span></div>
+    <div><b>某几页没声音？</b><span>那一页没有备注也没有正文，会静默展示 2 秒，可以手动补台词。</span></div>
+    <div><b>课件会被上传吗？</b><span>不会。全过程在你自己的电脑上跑（选「微软（联网）」音色时，只有朗读文本会发去微软的语音服务，画面不上传）。</span></div>
+  </div>
+  <div class="notice">
+    <b>实测速度：</b>40 页约 <b>159 秒</b>（约 4 秒/页，本地离线配音）；转换时建议预留约「成片大小 × 5」的磁盘空间。
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="fl"><img src="assets/mark.png" alt=""><span>迈宝团队</span></div>
+  <p>商业授权 · 界面与片头片尾定制 · 内网私有化部署 · 批量转换方案</p>
+  <p><a href="mailto:joy427@163.com">joy427@163.com</a></p>
+  <p class="fine">下载即表示你已知悉上方「能力边界」说明。本页软件免费使用，不收取任何费用。</p>
+</footer>
+
+</body>
+</html>
